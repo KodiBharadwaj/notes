@@ -1,0 +1,353 @@
+<html>
+<head>
+	<title> My info </title>
+</head>
+<body>
+
+
+
+<a href="#intro"> Intro </a> <br>
+<a href="#java_script"> Java Script </a> <br>
+<a href="#react"> React </a> <br>
+<a href="#linux"> Linux </a> <br>
+<a href="#dbms_sql"> Dbms and sql </a>
+
+<p>
+<pre>
+<font size=6>
+
+<h2 id="intro"> MY INTRO </h2> 
+Good mrng sir,
+	Myself Kodi Bharadwaj. Iam Currently persuing my 
+undergraduate program in electrical and electronics domain
+in NIT Calicut.Iam from srikakulam, Andhra pradesh.
+Coming to my academics, I got 100 percentage in bse and 98 
+percentage in bie. 
+
+Coming to my technical skills, Iam comfortable with c++,c,data structures in programming 
+also html, css, java script, and react in web development part.
+
+coming to my hobbies,,,, i love enjoying new things which
+inspire me.I would like to grow both personally as well as professionally.
+
+I have done projects on web page development. One is 
+
+1) a mern messenger which is a chatting application 
+in which user is securely allowed into the app and can make real time chat
+and this was deployed in render to make it available online.
+and another one is the sudoku game solver.
+
+In which user is able to solve puzzles and can receive the instant solutions
+of it by the c++ code in the script.js file and this is deployed in github.
+
+I have also created my portfolio using HTML and CSS in a responsive way
+in which all my skill set and links of all my achivements are included which is
+deployed in render.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Concepts to study:
+<h2 id="java_script">Java script:</h2>
+Popular web language which is free to use.
+Javascript is executed on the client-side as well as server-side also.
+It uses Ecma script 6(version of js) which includes features: let,const,arrow fn,map,js modules(import like that) etc.
+
+1) what are the data types of js?
+	a)primitive: string,var,boolean
+	b)Non-primitive: used to store multiple values like a collection.
+
+2)what is hoisting in js?
+	ariable and function declarations are moved on top.
+	ex: a = 3;
+	    console.log(a);
+	    var a;
+
+3. Why do we use the word “debugger” in javascript?
+	The debugger for the browser must be activated in order to debug the code.While debugging, the next code line wont 
+	gets executed.
+
+4. Difference between “ == “ and “ === “ operators.
+	== focus on the values and === focus on the type
+	ex: var x = 2;
+	    var y = "2";
+	    (x == y)  // Returns true since the value of both x and y is the same
+	    (x === y) // Returns false since the typeof x is "number" and typeof y is "string"
+
+5. Difference between var and let keyword in javascript.
+
+	var: it is acceptable anywhere in the function and can be modified
+	let: limited to the block of code where it is declared and cant be modified once the value is assigned.
+
+6.Explain Implicit Type Coercion in javascript.
+	when two variables are of different types then concatenation gets occur
+	ex: var x = 3;
+   	    var y = "3";
+	    x + y // Returns "33" 
+
+7. Is javascript a statically typed or a dynamically typed language?
+	it is dynamically typed language because the values assigned to the values are checked at run-time rather than 
+	compile-time.
+
+8. What is NaN property in JavaScript?
+	NaN stands for Not a Number
+	ex: 
+	isNaN("Hello")  // Returns true
+	isNaN(345)   // Returns false
+	isNaN('1')  // Returns false, since '1' is converted to Number type which results in 0 ( a number) 
+	isNaN(true) // Returns false, since true converted to Number type results in 1 ( a number)
+	isNaN(false) // Returns false
+	isNaN(undefined) // Returns true
+
+9. Explain passed by value and passed by reference.
+	In JavaScript, primitive data types are passed by value and non-primitive data types are passed by reference.
+	ex:
+	Primitive: var a = 5;
+	Non-primitive: var obj = { name: "Vivek", surname: "Bisht" };
+		       var obj2 = obj; // here the reference of obj is passed to obj2.
+
+10. What is an Immediately Invoked Function in JavaScript?
+	An Immediately Invoked Function known as IIFE is a function that runs as soon as it is defined.
+
+	ex:
+	// Regular Function.   
+	function hello()   
+	{   
+    	   console.log("Regular function");   
+	};   
+	// Regular Function execution.   
+	hello();   
+    
+	// IIFE creation and execution.   
+	(function() { console.log("Immediately Invoked Function Expression"); })();
+  
+11. What do you mean by strict mode in javascript and characteristics of javascript strict-mode?
+	In java script strict mode, errors cant be raised because of these characteristics:
+		1.Duplicate arguments are not allowed by developers.
+		2.In strict mode, not able to use the JavaScript keyword as a parameter or function name.
+		3.strict keyword is defined at the start of the script. 
+		4.Not able to create global variables in strict mode.
+
+12. Explain Higher Order Functions in javascript.
+	Defining function inside a function.
+
+13. Explain “this” keyword.
+	this keyword refers to an object(collection of properties).
+
+14. What do you mean by Self Invoking Functions?
+	function gets executed without calling it.	
+	An anonymous function is enclosed inside a set of parentheses followed by another set of parentheses (),
+	which does the execution.
+
+	(function(){
+    	console.log("This function is called immediately");
+	})();
+
+15. Explain call(), apply() and, bind() methods.
+	call():a method to call a function in which we can pass the other function's parameters.
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+const person2 = {
+  firstName:"Mary",
+  lastName: "Doe"
+}
+
+// This will return "John Doe":
+person.fullName.call(person1);
+
+	apply():The apply method is similar to the call() method. The only difference is that, call() method takes arguments 
+	separately whereas, apply() method takes arguments as an array.
+function addNumbers(a, b) {
+  return a + b;
+}
+const numbers = [5, 7];
+const result = addNumbers.apply(null, numbers);
+console.log(result); // Output: 12
+	
+	blind(): This method returns a new function, where the value of “this” keyword will be bound to the owner object, 
+        which is provided as a parameter.
+
+16. What is the difference between exec() and test() methods in javascript?
+	exec(): is used to search a string. if(found) it prints the pattern of string else prints 'empty'.
+	test(): is used to find a requiered part in a string. if(found) prints true else false.
+
+17.What is currying in JavaScript?
+	Currying is an advanced technique to transform a function of arguments n, to n functions of one or fewer arguments.
+	ex:
+function add (a) {
+  return function(b){
+    return a + b;
+  }
+}
+
+add(3)(4) 
+
+18. What are callbacks?
+	a function is called with having some parameters in it along with another function name.
+	ex:here after performing operatioOnSum function, divideByHalf function is called since it is used as callback.
+function divideByHalf(sum){
+  console.log(Math.floor(sum / 2));
+}
+
+function multiplyBy2(sum){
+  console.log(sum * 2);
+}
+
+function operationOnSum(num1,num2,operation){
+  var sum = num1 + num2;
+  operation(sum);
+}
+
+operationOnSum(3, 3, divideByHalf); // Outputs 3
+
+operationOnSum(5, 5, multiplyBy2); // Outputs 20
+
+19.What are the errors in js?
+	syntax errors(parsing) and Logical errors.
+
+20.What is DOM?
+	DOM is Document Object Model. It is a programming interface of HTML and XML documents.When the browser tries 
+	to render an HTML document, it creates an object based on the HTML document called DOM. 
+	Using this DOM, we can manipulate or change various elements inside the HTML document.
+
+21) what are the two types of functions in js?
+	a) Named functions:  These type of functions contains name at the time of definition. For Example:
+function display()  
+{  
+  document.writeln("Named Function");  
+}  
+display();  
+
+	b) Anonymous functions:These type of functions doesn't contain any name. They are declared dynamically at runtime.
+var display=function()  
+{  
+  document.writeln("Anonymous Function");  
+}  
+display();  
+
+22) Are Java and JavaScript same?
+	No, Java and JavaScript are the two different languages. Java is a robust, secured and object-oriented 
+	programming language whereas JavaScript is a client-side scripting language with some limitations.
+
+23) How to handle exceptions in JavaScript?
+	By the help of try/catch block, we can handle exceptions in JavaScript. 
+	JavaScript supports try, catch, finally and throw keywords for exception handling.
+
+
+Disadvantages:
+No support for multithreading.
+No support for multiprocessing.
+Reading and writing of files is not allowed.
+
+
+concentrate on js closures, bom 
+
+
+__________________________________________________________________________
+__________________________________________________________________________
+
+<h2 id="react">REACT JS:</h2>
+React:
+It is a frontend java script library used to build user interfaces created by facebook.
+Code reusability.
+It uses virtual dom(Instead of reloading the entire page, it gets changed at the specifice part of only where the change is
+happened. 
+We need npm to start react. React ES6 features are: classes, arrow fn's, destructuring, spread operator, ternary etc.
+How to render?
+	const container = document.getElementById('root');
+	const root = ReactDOM.createRoot(container);
+	root.render(<p>Hello</p>);
+JSX stands for Java Script XML (JSX allows us to write HTML code inside JavaScript)
+
+
+Advantages:
+Supports server side rendering.
+Makes virtual dom rather than real dom.
+Code reusability.
+SEO friendly.
+
+Limitations:
+It might be difficult for beginner programmers to understand React.
+
+
+1. what are props?
+	Props are nothing but properties(html attributes) which are send to the class components.(typically from parent
+	component to child component)
+2. What is React Hooks?
+	These are builtin functions which are the features from functional component.
+	These should be implemented at the top in the functional component and should not be conditional.
+3. Explain useState() react hook.
+	It is used to maintain a state value. The value is monitored and its get updated when changes happen.
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+
+4.Explain useEffect hook.
+	Used to perform the side effects in functional components.It gets run after there is a change in the state of our
+	application.
+
+5.why react not angular?
+	In angular there is no virtual dom, slow, angular is client side only. Angular is by Google.
+
+6.How React's ES6 syntax is different from ES5 syntax? 
+	var React = require('react');  
+	module.exports = Component;  // ES5
+
+	import React from 'react';
+	export default Component;   // ES6
+
+7. What are the problems in real DOM than Virtual DOM?
+	1.real dom manipulation is expensive
+	2.lot of memory wastage.
+	3.updates slower.
+
+
+
+concentrate on Hooks,keys,props
+
+___________________________________________________________________________________
+___________________________________________________________________________________
+
+<h2 id="linux"> LINUX </h2>
+<iframe src="linux.pdf" width="900" height="900"></iframe>
+
+<h2 id="dbms_sql"> DBMS and SQL </h2>
+<iframe src="dbms.pdf" width="900" height="900"> </iframe>
+
+
+
+</font>
+</pre>
+</p>
+
+</body>
+</html>

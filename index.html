@@ -11,6 +11,7 @@
 <a href="#react"> React </a> <br>
 <a href="#linux"> Linux </a> <br>
 <a href="#dbms_sql"> Dbms and sql </a>
+<a href="#project_explanation"> Mern_Messenger Project Explanation </a>
 
 <p>
 <pre>
@@ -337,6 +338,59 @@ concentrate on Hooks,keys,props
 ___________________________________________________________________________________
 ___________________________________________________________________________________
 
+<h2 id="project_explanation"> MERN_MESSENGER PROJECT OVERVIEW </h2>
+1)firstu index.js lo app.js ni browser router(used for routing), chat provider ni mana mern app ki apply chesthamu and then
+  app.js ni call chesthamu.
+
+2)app.js nundi wrt url pages route avthay namely: HomePage and chatPage.
+
+3)HomePage lo rendu components untay avvi Login and Signup.
+
+4)signup button nokkinappudu submitHandler function call avthadi and andulo api call jarigi server.js ki pothadi.
+  const { data } = await axios.post( "/api/user")
+
+5)server.js lo app.use("/api/user",userRoutes)  tho manam define chesinattu execution anedi userRoutes ki velthundhi.
+  Ippudu userroutes lo router.route("/").post(registerUser).get(protect,allUsers); deeni dwara userControllers loki velthadi.
+  akkada name, password, confirmpassword avanne verify ayyaka generateToken.js lo token generate ayyi user yokka object ki 
+  add ayyi aaa object anedi user ki assign avthadi. So userController to UserRoutes to Server.js to Signup ki back ki aa 
+  value assign avthundi and then registration csuccessful ani signup.js lo ayyaka history.push("/chats") dwara chatpage call 
+  avthadi.
+
+6)/chats anedi app.js lo untadi kabatti ippudu chatpage anedi call avthadi. 
+
+7)chatPage lo sideDrawer.js, Mychats.js, and chatBox.js components untay. SideDrawer lo search, Mern app name,
+  notification Badge,profile anevi untay.
+
+8)user ni search chesinappudu call andedi fetchChats dwara userRoutes ki poyi akkada nundi 
+  router.route("/").post(registerUser).get(protect,allUsers); allusers dwara user controller.js ki velthadi.
+  usercontrollers lo allusers function lo database lo users ni find chesi return chesthadi.
+
+9)side drawer lo user ni click chesinappudu side drawer lo unna accessChat function call ayyi andulo unna
+  const { data } = await axios.post("/api/chat", { userId }, config);  api call valla server.js ki call velthadi and akkada
+  nundhi chatRoutes dwara chatControllers loni accessChat ki velthadi akkada chat ni fetch chesi return chesthadi.
+
+10) Group chat aithe fetchChates function call avthadi.
+
+11) Chatlogics anedi messages pampinchinappudu correct person nundi correct person ki vellinda leda anedi choosukuntadi.
+
+12) chatProvider anedi: In abstract, this code defines a context and provider in a React application for managing 
+    chat-related state. It includes user information, selected chat, chat messages, and notifications. The provider ensures 
+    that this state is available to components within the chat application, and the state can be accessed using the ChatState 
+    function. Additionally, it checks if a user is authenticated and redirects to the homepage if not.
+
+13) Login ayyinappudu userRoutes nundi userControllers lo authentication authUser aney function lo jarigi token user ki
+    attach chesthadi. next eppudyna user edaina action chesinappudu user valid ah leda kadu ah anedi authMiddleware lo 
+    jaruguthadi.
+
+14) errorMiddleware anedi resource or routes lenappudu execute ayyi 404 status code ni represent chesthadi.
+
+15) db.js file lo manam mongodb ni mana server ki link chesi padesthamu ela antey .env lo unna MONGO_URI link ni connnect
+    chesthamu ikkada.
+
+16) Modals.js(user,chat,message) explains the schema and business logic in it. our db understands how to structure our data
+    inside the db.
+___________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________
 <h2 id="linux"> LINUX </h2>
 <iframe src="linux.pdf" width="900" height="900"></iframe>
 
